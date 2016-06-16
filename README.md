@@ -45,7 +45,10 @@ Steps to do:
 * cd output_dir
 * python calibrate_PLCC.py -i input_dir  -o ./ -n path_to_pinhole_params.txt -a path_to_summed_image.png
 
-For evaluation we have the same convensions, do as described in "Photometric laser scanner to camera calibration (submittted to ITSC 2016)  
+For more plots:
+* python do_plotting_laserscalib.py -i output_dir/Results.p -o figure_output_dir -e ".svg"
+
+For evaluation we have the same conventions, do as described in "Photometric laser scanner to camera calibration (submittted to ITSC 2016)  
 
 Execute:  
 python evaluate_calibration_box_PCLL.py -r output_dir/Results.p -o output_dir -i eval_input_dir  
