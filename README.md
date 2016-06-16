@@ -9,16 +9,16 @@ The minimum number of laser rays of the scanner is 2.
 
 ## Installation
 
-Non-standard dependencies : math3d, scipy, cv2 (all available in "pip install")
-Standard dependencies: glob, os, optparse, pickle
+Non-standard dependencies : math3d, scipy, cv2 (all available in "pip install")  
+Standard dependencies: glob, os, optparse, pickle  
 
 ## Usage
 
 Point clouds and images are stored in the same directory (hereby called input_dir), each one named by 
 timestamp_ns.csv or timestamp_ns.png (f.e. 1465281413942525161.csv)
 
-You need point clouds in the following format:
-1465281413942525161.csv:
+You need point clouds in the following format:  
+1465281413942525161.csv:  
 X, Y, Z, Amplitude, TimeStamp
 3.40282346639e+38, 3.40282346639e+38, 3.40282346639e+38, -1, 1465281266463374068
 3.40282346639e+38, 3.40282346639e+38, 3.40282346639e+38, -1, 1465281266463374068
@@ -29,27 +29,29 @@ X, Y, Z, Amplitude, TimeStamp
 
 In the current implementation the scanning planes are in x-y direction (also several planes possible tilted around x or y)
 
+
 You need !!undistorted!! images without background illumination in which the infra-red laser-scanner spots are visible.
 Therefore, do not use infra-red filters in your lense.
 During the data acquisistion use a card board or something similar to generate measurements at various differences from the laser-scanner-camera rig.
 Currently the outlier rejection is only supported for pinhole camera models. However the error minimized is also suited for wide-angle camera. In the examples we use lenses with 110° viewing angle.
 Save the pinhole camera paramters in a textfile:
-pinhole_calib.txt:
-f, cu, cv
+pinhole_calib.txt:  
+f, cu, cv  
 356.058898926, 456, 290
 
+
 Steps to do: 
-1. python sum_images.py input_dir path_to_summed_image.png
-2. cd output_dir
-3. python calibrate_PLCC.py -i input_dir  -o ./ -n path_to_pinhole_params.txt -a path_to_summed_image.png
+1.  python sum_images.py input_dir path_to_summed_image.png
+2.  cd output_dir
+3.  python calibrate_PLCC.py -i input_dir  -o ./ -n path_to_pinhole_params.txt -a path_to_summed_image.png
 
 For evaluation we have the same convensions, do as described in "Photometric laser scanner to camera calibration (submittted to ITSC 2016)
 Execute:
-python evaluate_calibration_box_PCLL.py -r output_dir/Results.p -o output_dir -i eval_input_dir
+  python evaluate_calibration_box_PCLL.py -r output_dir/Results.p -o output_dir -i eval_input_dir
 
 ## Sample data
 
-https://www.mrt.kit.edu/graeterweb/PLCC_sample_data.zip
+[identifier] https://www.mrt.kit.edu/graeterweb/PLCC_sample_data.zip
 
 ## License
 
