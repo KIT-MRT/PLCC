@@ -41,11 +41,12 @@ f, cu, cv
 
 
 Steps to do: 
-1  python sum_images.py input_dir path_to_summed_image.png
-2  cd output_dir
-3  python calibrate_PLCC.py -i input_dir  -o ./ -n path_to_pinhole_params.txt -a path_to_summed_image.png
+* python sum_images.py input_dir path_to_summed_image.png
+* cd output_dir
+* python calibrate_PLCC.py -i input_dir  -o ./ -n path_to_pinhole_params.txt -a path_to_summed_image.png
 
-For evaluation we have the same convensions, do as described in "Photometric laser scanner to camera calibration (submittted to ITSC 2016)
+For evaluation we have the same convensions, do as described in "Photometric laser scanner to camera calibration (submittted to ITSC 2016)  
+
 Execute:  
 python evaluate_calibration_box_PCLL.py -r output_dir/Results.p -o output_dir -i eval_input_dir  
 
