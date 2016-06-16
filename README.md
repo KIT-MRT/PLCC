@@ -54,6 +54,22 @@ python evaluate_calibration_box_PCLL.py -r output_dir/Results.p -o output_dir -i
 
 [sample_data] https://www.mrt.kit.edu/graeterweb/PLCC_sample_data.zip
 
+## Contributing
+
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
+
+## History
+
+## Credits
+
+## Related Papers
+
+* **Photometric laser scanner to camera calibration**, *J. Gräter, T. Strauß, M.Lauer*, submittted to ITSC '16
+
 ## License
 
 This program is free software: you can redistribute it and/or modify
