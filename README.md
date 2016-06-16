@@ -19,13 +19,13 @@ timestamp_ns.csv or timestamp_ns.png (f.e. 1465281413942525161.csv)
 
 You need point clouds in the following format:  
 1465281413942525161.csv:  
-X, Y, Z, Amplitude, TimeStamp
-3.40282346639e+38, 3.40282346639e+38, 3.40282346639e+38, -1, 1465281266463374068
-3.40282346639e+38, 3.40282346639e+38, 3.40282346639e+38, -1, 1465281266463374068
--0.000296705665418, 0.118999630108, 0, 206, 1465281266463374068
--0.000273018725084, 0.0729994894556, 0, 225, 1465281266463374068
--0.000314157963342, 0.0629992166997, 0, 221, 1465281266463374068
--0.00043009620905, 0.0689986595323, 0, 224, 1465281266463374068
+X, Y, Z, Amplitude, TimeStamp  
+3.40282346639e+38, 3.40282346639e+38, 3.40282346639e+38, -1, 1465281266463374068  
+3.40282346639e+38, 3.40282346639e+38, 3.40282346639e+38, -1, 1465281266463374068  
+-0.000296705665418, 0.118999630108, 0, 206, 1465281266463374068  
+-0.000273018725084, 0.0729994894556, 0, 225, 1465281266463374068  
+-0.000314157963342, 0.0629992166997, 0, 221, 1465281266463374068  
+-0.00043009620905, 0.0689986595323, 0, 224, 1465281266463374068  
 
 In the current implementation the scanning planes are in x-y direction (also several planes possible tilted around x or y)
 
@@ -37,21 +37,21 @@ Currently the outlier rejection is only supported for pinhole camera models. How
 Save the pinhole camera paramters in a textfile:
 pinhole_calib.txt:  
 f, cu, cv  
-356.058898926, 456, 290
+356.058898926, 456, 290  
 
 
 Steps to do: 
-1.  python sum_images.py input_dir path_to_summed_image.png
-2.  cd output_dir
-3.  python calibrate_PLCC.py -i input_dir  -o ./ -n path_to_pinhole_params.txt -a path_to_summed_image.png
+1  python sum_images.py input_dir path_to_summed_image.png
+2  cd output_dir
+3  python calibrate_PLCC.py -i input_dir  -o ./ -n path_to_pinhole_params.txt -a path_to_summed_image.png
 
 For evaluation we have the same convensions, do as described in "Photometric laser scanner to camera calibration (submittted to ITSC 2016)
-Execute:
-  python evaluate_calibration_box_PCLL.py -r output_dir/Results.p -o output_dir -i eval_input_dir
+Execute:  
+python evaluate_calibration_box_PCLL.py -r output_dir/Results.p -o output_dir -i eval_input_dir  
 
 ## Sample data
 
-[identifier] https://www.mrt.kit.edu/graeterweb/PLCC_sample_data.zip
+[sample_data] https://www.mrt.kit.edu/graeterweb/PLCC_sample_data.zip
 
 ## License
 
