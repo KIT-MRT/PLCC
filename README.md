@@ -10,7 +10,9 @@ The minimum number of laser rays of the scanner is 2.
 ## Installation
 
 Non-standard dependencies : math3d, scipy, cv2 (all available in "pip install")  
-Standard dependencies: glob, os, optparse, pickle  
+Standard dependencies: glob, os, optparse, cPickle  
+
+Tested with python2.7, Ubuntu 14.04 LTS
 
 ## Usage
 
@@ -55,7 +57,11 @@ python evaluate_calibration_box_PCLL.py -r output_dir/Results.p -o output_dir -i
 
 ## Sample data
 
-[sample_data] https://www.mrt.kit.edu/graeterweb/PLCC_sample_data.zip
+[sample_data] https://www.mrt.kit.edu/graeterweb/PLCC_sample_data.zip  
+In the extracted folder you will find data_calib and data_evaluation.
+Some calculate results are to be found in eval as pickle files (*.p).
+For these to be shown execute the command shown in execution_command.txt in a terminal.
+If you want to reset everything, just refresh eval.
 
 ## Contributing
 
